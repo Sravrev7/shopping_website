@@ -21,6 +21,9 @@ img{
     box-shadow: 5px 5px 3px grey;
     border-radius: 10px;
 }
+.product-card:hover{
+    transform: scale(1.07);
+}
 .product-details{
     display: flex;
     flex-direction: column;
