@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <h1>ABHIMANYU</h1>
+    <div class="products">
+        <div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+          <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+          <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+          <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <p class="title"></p>
+            <p class="price"></p>
+            <p class="rating"></p>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+        <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+            <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+           <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+          <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+          <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div><div class="product-card">
+            <img src="" alt="not found">
+        <div class="product-details">
+                <p class="title"></p>
+                <p class="price"></p>
+                <p class="rating"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var images = document.getElementsByTagName("img")
+        var title=document.getElementsByClassName("title")
+        var prices=document.getElementsByClassName("price")
+        var rating=document.getElementsByClassName("rating")
+        async function getProducts() {
+            let data=await fetch('https://fakestoreapi.com/products')
+            let res= await data.json()
+            for(let i=0;i<20;i++){
+                images[i].src=res[i].image
+                title[i].innerHTML=`Title : ${res[i].category}`
+                prices[i].innerHTML=`Price : ${res[i].price}`
+                rating[i].innerHTML= `Rating : ${res[i].rating.rate}`
+            }
+            
+        }
+        getProducts()
+    </script>
+</body>
+</html>
